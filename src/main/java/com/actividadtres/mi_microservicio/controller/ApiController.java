@@ -17,7 +17,7 @@ public class ApiController {
     @GetMapping("/")
     public Map<String, Object> root() {
         return Map.of(
-            "mensaje", "Microservicio Java funcionando en Kubernetes! Al fin",
+            "mensaje", "Microservicio Java funcionando en Kubernetes! Al fin :)",
             "version", "1.2000",
             "timestamp", LocalDateTime.now().toString(),
             "entorno", entorno
