@@ -1,0 +1,33 @@
+# Imagen Docker
+image:
+  repository: ivanvetr/mi-microservicio  
+  tag: '1.0.0'
+  pullPolicy: IfNotPresent
+
+# Réplicas del pod
+replicaCount: 1
+
+# Servicio Kubernetes
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8181
+
+# Ingress (entrada de tráfico externo)
+ingress:
+  enabled: true
+  className: 'traefik'
+  host: mi-servicio.local
+
+# Recursos del contenedor
+resources:
+  requests:
+    memory: '256Mi'
+    cpu: '100m'
+  limits:
+    memory: '512Mi'
+    cpu: '500m'
+
+# Variables de entorno para Spring Boot
+env:
+  ENTORNO: produccion

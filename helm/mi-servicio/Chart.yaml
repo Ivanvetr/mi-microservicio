@@ -1,0 +1,11 @@
+apiVersion: v2
+name: mi-servicio
+description: Chart Helm para microservicio Java 25 + Spring Boot 4.0.3
+type: application
+version: 0.1.0
+appVersion: '1.0.0'
+keywords:
+  - java
+  - spring-boot
+  - kubernetes
+  - microservicio

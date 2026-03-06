@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: mi-microservicio
+
+server:
+  port: 8080
+
+app:
+  entorno: ${ENTORNO:desarrollo}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  endpoint:
+    health:
+      show-details: always
