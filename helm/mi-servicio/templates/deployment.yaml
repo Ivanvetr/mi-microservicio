@@ -35,14 +35,14 @@ spec:
           livenessProbe:
             httpGet:
               path: /actuator/health
-              port: 9090
-            initialDelaySeconds: 45
-            periodSeconds: 10
+              port: 8080
+            initialDelaySeconds: 90
+            periodSeconds: 15
             failureThreshold: 5
           readinessProbe:
             httpGet:
               path: /actuator/health
-              port: 9090
-            initialDelaySeconds: 30
-            periodSeconds: 5
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
             failureThreshold: 5
