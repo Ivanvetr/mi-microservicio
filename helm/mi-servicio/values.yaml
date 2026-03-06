@@ -5,7 +5,7 @@ image:
   pullPolicy: IfNotPresent
 
 # Réplicas del pod
-replicaCount: 1
+replicaCount: 3
 
 # Servicio Kubernetes
 service:
