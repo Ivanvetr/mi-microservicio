@@ -18,7 +18,7 @@ public class ApiController {
     public Map<String, Object> root() {
         return Map.of(
             "mensaje", "Microservicio Java funcionando en Kubernetes! Al fin :)",
-            "version", "1.2000",
+            "version", "1.2.20",
             "timestamp", LocalDateTime.now().toString(),
             "entorno", entorno
         );
