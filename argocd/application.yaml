@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mi-microservicio
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: mi-app
+  project: default
+  source:
+    repoURL: https://github.com/ivanvetr/mi-microservicio.git
+    targetRevision: main
+    path: helm/mi-servicio
+    helm:
+      valueFiles:
+        - values.yaml
+  syncPolicy:
+    automated:
+      prune: true      # Elimina recursos que ya no están en Git
+      selfHeal: true   # Corrige cambios manuales no autorizados
+    syncOptions:
+      - CreateNamespace=true
