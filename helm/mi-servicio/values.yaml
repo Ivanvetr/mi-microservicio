@@ -1,7 +1,7 @@
 # Imagen Docker
 image:
   repository: ivanvetr/mi-microservicio  
-  tag: '8b16931'
+  tag: 'a62bbd7'
   pullPolicy: IfNotPresent
 
 # Réplicas del pod
